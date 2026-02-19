@@ -1,0 +1,67 @@
+<html>
+  <div class="partners-marquee" aria-label="Partner companies">
+    <div class="partners-track">
+      <img src="https://www.consorcioservopa.com.br/_app/assets/images/logo-footer-light.svg" />
+      <img src="https://www.embracon.com.br/img/embracon-logo4.svg" />
+      <img src="https://hsconsorcios.com.br/wp-content/uploads/2022/09/logo-hs-consorcios-br.svg" />
+      <img src="https://www.cnvw.com.br/img/logos/logo-consorcio-vw.svg" />
+      <img src="https://storage.googleapis.com/dashboard-and-plataform/mult-consorciogo/AF_Serello_Marca_RGB_FUNDO%20AZUL%20MARINHO.png" />
+
+      <img src="https://www.consorcioservopa.com.br/_app/assets/images/logo-footer-light.svg" />
+      <img src="https://www.embracon.com.br/img/embracon-logo4.svg" />
+      <img src="https://hsconsorcios.com.br/wp-content/uploads/2022/09/logo-hs-consorcios-br.svg" />
+      <img src="https://www.cnvw.com.br/img/logos/logo-consorcio-vw.svg" />
+      <img src="https://storage.googleapis.com/dashboard-and-plataform/mult-consorciogo/AF_Serello_Marca_RGB_FUNDO%20AZUL%20MARINHO.png" />
+    </div>
+  </div>
+
+  <style>
+    .partners-marquee {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+      padding: 14px 0;
+    }
+
+    .partners-marquee::before,
+    .partners-marquee::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .partners-track {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: max-content;
+      animation: marquee 22s linear infinite;
+    }
+
+    .partners-track img {
+      height: 34px;
+      width: auto;
+      opacity: 0.65;
+      filter: grayscale(1) brightness(0) invert(1);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .partners-marquee:hover .partners-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</html>
